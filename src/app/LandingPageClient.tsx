@@ -153,13 +153,11 @@ function LandingContent({ events, sermons }: Props) {
         })
         .catch(() => {});
     } else {
-      navigator.clipboard
-        .writeText(window.location.href)
-        .then(() =>
-          showAlert("Tautan website berhasil dicopy ke clipboard!", {
-            title: "Tautan Disalin",
-          }),
-        );
+      navigator.clipboard.writeText(window.location.href).then(() =>
+        showAlert("Tautan website berhasil dicopy ke clipboard!", {
+          title: "Tautan Disalin",
+        }),
+      );
     }
   };
 
@@ -233,6 +231,12 @@ function LandingContent({ events, sermons }: Props) {
             >
               Beranda
             </button>
+            <Link
+              href="/profile-yayasan-dkm"
+              className="text-xs uppercase font-extrabold tracking-wider text-emerald-100 hover:text-amber-400 transition cursor-pointer px-2 py-2"
+            >
+              Profile
+            </Link>
             <button
               onClick={() => scrollToSection("kegiatan")}
               className="text-xs uppercase font-extrabold tracking-wider text-emerald-100 hover:text-amber-400 transition cursor-pointer px-2 py-2"
@@ -368,6 +372,13 @@ function LandingContent({ events, sermons }: Props) {
               >
                 Beranda
               </button>
+              <Link
+                href="/profile-yayasan-dkm"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-left px-4 py-3 text-sm font-bold text-emerald-100 bg-emerald-900/50 hover:bg-emerald-900 rounded-xl"
+              >
+                Profile Yayasan / DKM
+              </Link>
               <button
                 onClick={() => scrollToSection("kegiatan")}
                 className="text-left px-4 py-3 text-sm font-bold text-emerald-100 bg-emerald-900/50 hover:bg-emerald-900 rounded-xl"
@@ -525,6 +536,14 @@ function LandingContent({ events, sermons }: Props) {
                   >
                     Dashboard Beranda
                   </button>
+                </li>
+                <li>
+                  <Link
+                    href="/profile-yayasan-dkm"
+                    className="hover:text-amber-400 transition cursor-pointer"
+                  >
+                    Profile Yayasan / DKM
+                  </Link>
                 </li>
                 <li>
                   <button

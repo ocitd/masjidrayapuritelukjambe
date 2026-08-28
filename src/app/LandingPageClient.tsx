@@ -243,6 +243,12 @@ function LandingContent({ events, sermons }: Props) {
             >
               Program
             </button>
+            <a
+              href="https://baabussalam.masjidrayapuritelukjambe.com/"
+              className="text-xs uppercase font-extrabold tracking-wider text-emerald-100 hover:text-amber-400 transition cursor-pointer px-2 py-2"
+            >
+              Baabussalam
+            </a>
             <button
               onClick={() => scrollToSection("khutbah")}
               className="text-xs uppercase font-extrabold tracking-wider text-emerald-100 hover:text-amber-400 transition cursor-pointer px-2 py-2"
@@ -385,6 +391,12 @@ function LandingContent({ events, sermons }: Props) {
               >
                 Program Dakwah
               </button>
+              <a
+                href="https://baabussalam.masjidrayapuritelukjambe.com/"
+                className="text-left px-4 py-3 text-sm font-bold text-emerald-100 bg-emerald-900/50 hover:bg-emerald-900 rounded-xl"
+              >
+                Baabussalam
+              </a>
               <button
                 onClick={() => scrollToSection("khutbah")}
                 className="text-left px-4 py-3 text-sm font-bold text-emerald-100 bg-emerald-900/50 hover:bg-emerald-900 rounded-xl"
